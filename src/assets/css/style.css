@@ -73,13 +73,16 @@ body {
 .table.table-padding tr:last-child td {
   padding-bottom: 30px;
 }
-.table.table-padding tr th:first-child,
-.table.table-padding tr td:first-child {
-  padding-left: 50px;
-}
-.table.table-padding tr th:last-child,
-.table.table-padding tr td:last-child {
-  padding-right: 50px;
+@media only screen and (min-width: 768px) {
+  .table.table-padding tr th:first-child,
+  .table.table-padding tr td:first-child {
+    padding-left: 50px;
+  }
+
+  .table.table-padding tr th:last-child,
+  .table.table-padding tr td:last-child {
+    padding-right: 50px;
+  }
 }
 
 .btn-mint {
