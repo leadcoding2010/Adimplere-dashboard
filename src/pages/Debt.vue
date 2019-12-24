@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <h5 class="mt-5 mb-5 ml-0 ml-lg-5 text-blue">Minhas Dívidas</h5>
+    <h5 class="mt-5 mb-5 ml-0 ml-lg-5 text-blue font-weight-normal">Minhas Dívidas</h5>
     <div class="row justify-content-center">
-      <table class="table table-borderless rounded-top-12px text-center col-12 col-lg-9">
+      <table class="table table-borderless rounded-top-12px table-padding text-center col-12 col-lg-9">
         <thead class="thead-blue">
           <tr>
             <th scope="col">Serial No.</th>

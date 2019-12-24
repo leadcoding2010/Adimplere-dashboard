@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h5 class="mt-5 mb-5 ml-0 ml-lg-5 text-blue">Detalhes Acordo</h5>
+    <h5 class="mt-5 mb-5 ml-0 ml-lg-5 text-blue font-weight-normal">Detalhes Acordo</h5>
     <div class="row justify-content-center">
       <table class="table table-borderless rounded-top-12px text-center col-12 col-lg-9">
         <thead class="thead-blue">
@@ -39,7 +39,7 @@
         <button class="btn btn-mint btn-lg rounded-pill text-white mt-3 mb-3 pl-5 pr-5">Boleto</button>
       </div>
       <div class="col-12 text-center">
-        <a class="small" href="#">Linha digitável</a>
+        <a class="small" href="#"><u>Linha digitável</u></a>
       </div>
       <br>
     </div>

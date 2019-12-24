@@ -67,6 +67,20 @@ body {
   border-right: 1px solid #dee2e6;
   border-bottom: 1px solid #dee2e6;
 }
+.table.table-padding tr:first-child td {
+  padding-top: 30px;
+}
+.table.table-padding tr:last-child td {
+  padding-bottom: 30px;
+}
+.table.table-padding tr th:first-child,
+.table.table-padding tr td:first-child {
+  padding-left: 50px;
+}
+.table.table-padding tr th:last-child,
+.table.table-padding tr td:last-child {
+  padding-right: 50px;
+}
 
 .btn-mint {
   color: #fff;

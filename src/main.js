@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
+import VueGtm from 'vue-gtm'
 import App from './App'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -9,6 +10,16 @@ import router from './router'
 Vue.config.productionTip = false
 
 Vue.use(BootstrapVue)
+
+if (process.env.GTM_ID) {
+  Vue.use(VueGtm, {
+    id: process.env.GTM_ID,
+    enabled: true,
+    debug: process.env.NODE_ENV === 'development',
+    loadScript: true,
+    vueRouter: router
+  })
+}
 
 /* eslint-disable no-new */
 new Vue({

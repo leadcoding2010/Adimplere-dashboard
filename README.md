@@ -4,6 +4,8 @@
 
 ## Build Setup
 
+Configure Google Tag Manager (GTM_ID) in config/dev.env.js or config/prod.env.js
+
 ``` bash
 # install dependencies
 npm install
