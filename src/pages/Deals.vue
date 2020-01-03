@@ -17,7 +17,7 @@
             <td>{{ deal.created_at | dateFormatted }}</td>
             <td class="text-blue-muted">R$ {{ deal.value | moneyFormatted }}</td>
             <td>
-              <router-link :to="'/details/' + deal.id" class="btn btn-mint rounded-pill w-100">Parcelas</router-link>
+              <router-link v-if="deal.status.id !== 3" :to="'/details/' + deal.id" class="btn btn-mint rounded-pill w-100">Parcelas</router-link>
             </td>
           </tr>
         </tbody>

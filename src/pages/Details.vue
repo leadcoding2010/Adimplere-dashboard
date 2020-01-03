@@ -42,7 +42,7 @@
         <a class="small" @click.prevent="getBoletoCode()" href="#"><u>Linha digitável</u></a>
       </div>
       <div v-if="!doBoletoAvailable()" class="col-12 text-center">
-        Não disponível
+        Parcela {{ boletos.length }} - Não disponível
       </div>
     </div>
   </div>
