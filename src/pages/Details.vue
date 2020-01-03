@@ -35,13 +35,13 @@
           </tr>
         </tbody>
       </table>
-      <div v-if="!doBoletoAvailable" class="col-12 text-center">
+      <div v-if="doBoletoAvailable()" class="col-12 text-center">
         <button @click="getPdf()" class="btn btn-mint btn-lg rounded-pill text-white mt-3 mb-3 pl-5 pr-5">Boleto</button>
       </div>
-      <div v-if="!doBoletoAvailable" class="col-12 text-center">
+      <div v-if="doBoletoAvailable()" class="col-12 text-center">
         <a class="small" @click.prevent="getBoletoCode()" href="#"><u>Linha digitável</u></a>
       </div>
-      <div v-if="doBoletoAvailable" class="col-12 text-center">
+      <div v-if="!doBoletoAvailable()" class="col-12 text-center">
         Não disponível
       </div>
     </div>
