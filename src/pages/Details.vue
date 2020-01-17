@@ -1,6 +1,9 @@
 <template>
   <div class="container">
     <h5 class="mt-5 mb-5 ml-0 ml-lg-5 text-blue font-weight-normal">Detalhes Acordo</h5>
+    <div v-if="error && error.length > 0" class="alert alert-danger" role="alert">
+      {{ error }}
+    </div>
     <div v-if="boletos.length > 0" class="row justify-content-center">
       <table class="table table-borderless rounded-top-12px text-center col-12 col-lg-9">
         <thead class="thead-blue">
@@ -56,7 +59,8 @@ export default {
   data () {
     return {
       dealId: false,
-      boletos: []
+      boletos: [],
+      error: ''
     }
   },
 
@@ -80,8 +84,10 @@ export default {
             fileLink.click()
           })
           .catch(error => {
-            if (error.response.status === 400) {
-              console.log(error.response.data.error.message)
+            if (error.response.data.error && error.response.data.error.message) {
+              this.error = error.response.data.error.message
+            } else if (error.response.data.message) {
+              this.error = error.response.data.message
             }
           })
       }
@@ -117,7 +123,11 @@ export default {
       axios.get('/deal/' + this.dealId + '/boletos')
         .then(response => (this.boletos = response.data))
         .catch(function (error) {
-          console.log(error)
+          if (error.response.data.error && error.response.data.error.message) {
+            this.error = error.response.data.error.message
+          } else if (error.response.data.message) {
+            this.error = error.response.data.message
+          }
         })
     }
   }
